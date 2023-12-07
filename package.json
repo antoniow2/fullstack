@@ -5,12 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm-run-all --parallel start-server start-client",
-    "start-server": "node server/index.js",
-    "heroku-postbuild": "npm rebuild bcrypt --build-from-source && cd client && npm install && npm run build",
-    "start-client": "cd client && npm start",
-    "build": "react-scripts build --template ../../"
-  },
+    "start": "cd server && npm start",
+    "heroku-postbuild": "npm rebuild bcrypt --build-from-source && cd client && npm install && npm run build"
+  },  
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
