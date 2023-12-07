@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"  # or your build command
+  publish = "client/build"   # specify the client-side build directory
+
+[build.environment]
+  NODE_VERSION = "14"  # or your Node.js version
+
+[[redirects]]
+  from = "/api/*"
+  to = "http://localhost:5000/:splat"
+  status = 200
