@@ -7,5 +7,11 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "http://localhost:5000/:splat"
+  to = "/.netlify/functions/:splat"
   status = 200
+
+[dev]
+  command = "npm run start:dev"  # Adjust this based on your local development setup
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
